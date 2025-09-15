@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Web Page — Demo</title>
+  <meta name="description" content="A compact demo page with HTML, CSS, and JS — responsive, accessible, and interactive." />
+  <link rel="stylesheet" href="resources\styles.css" />
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <div class="brand">
+        <div class="logo">MW</div>
+        <div>
+          <h1>Mini Website</h1>
+          <p class="lead">Small demo: HTML • CSS • JS — responsive & accessible</p>
+        </div>
+      </div>
+
+      <div class="controls" role="toolbar" aria-label="Page controls">
+        <button id="themeToggle" class="btn" aria-pressed="false" title="Toggle light/dark">Toggle theme</button>
+        <button id="focusForm" class="btn secondary">Contact</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <h2 id="heroTitle">Welcome — a tidy little UI</h2>
+        <p>Clean layout, subtle motion, and a contact form on the right. Try toggling the theme or submitting the demo form.</p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Fast</h3>
+            <p>Loads instantly, no frameworks required.</p>
+          </article>
+          <article class="card">
+            <h3>Responsive</h3>
+            <p>Adapts nicely from mobile to desktop.</p>
+          </article>
+          <article class="card">
+            <h3>Accessible</h3>
+            <p>Keyboard-friendly, semantic HTML.</p>
+          </article>
+          <article class="card">
+            <h3>Modern</h3>
+            <p>Uses CSS variables and simple JS.</p>
+          </article>
+        </div>
+      </section>
+
+      <aside>
+        <div class="panel">
+          <h4>Contact Form</h4>
+          <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" required></textarea>
+
+            <button type="submit" class="btn" style="margin-top:10px">Send</button>
+          </form>
+          <p class="small">This is a demo form (no backend).</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Mini Website Demo</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">Message sent ✅</div>
+  <script src="resources\functions.js"></script>
+</body>
+</html>
